@@ -1,0 +1,6 @@
+framework module Pods_GarbageClassificationUIKit {
+  umbrella header "Pods-GarbageClassificationUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
