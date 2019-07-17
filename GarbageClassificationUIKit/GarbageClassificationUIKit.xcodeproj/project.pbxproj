@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		383F102822DD6FBC0085715E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383F102622DD6FBC0085715E /* Main.storyboard */; };
 		383F102A22DD6FBD0085715E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383F102922DD6FBD0085715E /* Assets.xcassets */; };
 		383F102D22DD6FBD0085715E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383F102B22DD6FBD0085715E /* LaunchScreen.storyboard */; };
+		38880ED622DED228000A3C70 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38880ED522DED228000A3C70 /* SearchViewController.swift */; };
 		EDB1BC8893E0EBE67B541960 /* Pods_GarbageClassificationUIKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12904F7FCF3B42A3CF11A584 /* Pods_GarbageClassificationUIKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		383F102922DD6FBD0085715E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		383F102C22DD6FBD0085715E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		383F102E22DD6FBD0085715E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38880ED522DED228000A3C70 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D4C53CF453B583B01003533C /* Pods-GarbageClassificationUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarbageClassificationUIKit.release.xcconfig"; path = "Target Support Files/Pods-GarbageClassificationUIKit/Pods-GarbageClassificationUIKit.release.xcconfig"; sourceTree = "<group>"; };
 		EB0F42ACF4C1F4A26F0067FC /* Pods_GarbageClassificationUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GarbageClassificationUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED7BFEF8DF106585FD0C1B8 /* Pods-GarbageClassificationUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarbageClassificationUIKit.debug.xcconfig"; path = "Target Support Files/Pods-GarbageClassificationUIKit/Pods-GarbageClassificationUIKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		383F101322DD6E920085715E /* GarbageClassificationUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				383F103222DD7E0F0085715E /* Sources */,
 				383F101422DD6E920085715E /* GarbageClassificationUIKit.h */,
 				383F101522DD6E920085715E /* Info.plist */,
 			);
@@ -107,6 +110,15 @@
 			path = GarbageClassificationUIKitDemo;
 			sourceTree = "<group>";
 		};
+		383F103222DD7E0F0085715E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				38880ED522DED228000A3C70 /* SearchViewController.swift */,
+			);
+			name = Sources;
+			path = ../../Sources;
+			sourceTree = "<group>";
+		};
 		91000A6D36312E7D0E6EF710 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +127,6 @@
 				FF3DE62C40E8BCF6FE5110FA /* Pods-GarbageClassificationUIKitDemo.debug.xcconfig */,
 				04EF3673B88712D4A5001A93 /* Pods-GarbageClassificationUIKitDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,6 +194,7 @@
 				TargetAttributes = {
 					383F101022DD6E920085715E = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					383F101F22DD6FBC0085715E = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -297,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38880ED622DED228000A3C70 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FED7BFEF8DF106585FD0C1B8 /* Pods-GarbageClassificationUIKit.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -474,6 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yb.wu.GarbageClassificationUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D4C53CF453B583B01003533C /* Pods-GarbageClassificationUIKit.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
