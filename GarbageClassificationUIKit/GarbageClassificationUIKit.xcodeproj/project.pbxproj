@@ -13,9 +13,35 @@
 		383F102822DD6FBC0085715E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383F102622DD6FBC0085715E /* Main.storyboard */; };
 		383F102A22DD6FBD0085715E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383F102922DD6FBD0085715E /* Assets.xcassets */; };
 		383F102D22DD6FBD0085715E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383F102B22DD6FBD0085715E /* LaunchScreen.storyboard */; };
+		3869F38722DF031E004D8BB2 /* GarbageClassificationUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383F101122DD6E920085715E /* GarbageClassificationUIKit.framework */; };
+		3869F38822DF031E004D8BB2 /* GarbageClassificationUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 383F101122DD6E920085715E /* GarbageClassificationUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38880ED622DED228000A3C70 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38880ED522DED228000A3C70 /* SearchViewController.swift */; };
 		EDB1BC8893E0EBE67B541960 /* Pods_GarbageClassificationUIKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12904F7FCF3B42A3CF11A584 /* Pods_GarbageClassificationUIKitDemo.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3869F38522DF01CD004D8BB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383F100822DD6E920085715E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 383F101022DD6E920085715E;
+			remoteInfo = GarbageClassificationUIKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3869F38922DF031E004D8BB2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3869F38822DF031E004D8BB2 /* GarbageClassificationUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04EF3673B88712D4A5001A93 /* Pods-GarbageClassificationUIKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GarbageClassificationUIKitDemo.release.xcconfig"; path = "Target Support Files/Pods-GarbageClassificationUIKitDemo/Pods-GarbageClassificationUIKitDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB1BC8893E0EBE67B541960 /* Pods_GarbageClassificationUIKitDemo.framework in Frameworks */,
+				3869F38722DF031E004D8BB2 /* GarbageClassificationUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,10 +196,12 @@
 				383F101D22DD6FBC0085715E /* Frameworks */,
 				383F101E22DD6FBC0085715E /* Resources */,
 				DDAA289B228EFBB2130E71A3 /* [CP] Embed Pods Frameworks */,
+				3869F38922DF031E004D8BB2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3869F38622DF01CD004D8BB2 /* PBXTargetDependency */,
 			);
 			name = GarbageClassificationUIKitDemo;
 			productName = GarbageClassificationUIKitDemo;
@@ -211,8 +240,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				383F101022DD6E920085715E /* GarbageClassificationUIKit */,
 				383F101F22DD6FBC0085715E /* GarbageClassificationUIKitDemo */,
+				383F101022DD6E920085715E /* GarbageClassificationUIKit */,
 			);
 		};
 /* End PBXProject section */
@@ -319,6 +348,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3869F38622DF01CD004D8BB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 383F101022DD6E920085715E /* GarbageClassificationUIKit */;
+			targetProxy = 3869F38522DF01CD004D8BB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		383F102622DD6FBC0085715E /* Main.storyboard */ = {
@@ -521,9 +558,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FF3DE62C40E8BCF6FE5110FA /* Pods-GarbageClassificationUIKitDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GarbageClassificationUIKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,7 +570,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yb.wu.GarbageClassificationUIKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -539,9 +578,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04EF3673B88712D4A5001A93 /* Pods-GarbageClassificationUIKitDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GarbageClassificationUIKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,7 +590,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yb.wu.GarbageClassificationUIKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
